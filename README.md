@@ -1,19 +1,37 @@
 # Blueprint Nova Addon
 
-![Build Status](https://travis-ci.org/Naoray/blueprint-nova-addon.svg?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/naoray/blueprint-nova-addon.svg?style=flat)](https://packagist.org/packages/naoray/blueprint-nova-addon)
 
 :mega: Shoutout to [Jason McCreary](https://github.com/jasonmccreary) whose [Blueprint](https://github.com/laravel-shift/blueprint) package lays the groundwork for this small addon. Thank you Jason :raised_hands:
 
 Installing this addon will allow you to generate your Nova resources with the `php artisan blueprint:build` command.
 
+This fork bumps dependency requirements in order to support Laravel 11.
+
+## Referencing this Fork in composer.json
+You will need to add this fork in your `composer.json` file before you attempt Installation:
+
+```bash
+    "repositories": {
+        "blueprint-nova-addon": {
+            "type": "vcs",
+            "url": "https://github.com/Red-Tailed-Partners/blueprint-nova-addon",
+            "no-api": true
+        }
+    }
+```
+
 ## Installation
 You can install this package and **Blueprint** via composer:
 
 ```bash
+composer require --dev naoray/blueprint-nova-addon:dev-master
+```
+NOTE: To use this fork, you must add `:dev-master` after the `composer require naoray/blueprint-nova-addon` command which is used in/for the original (unforked) composer installation, e.g.:
+
+```bash
 composer require --dev naoray/blueprint-nova-addon
 ```
-
 > :warning: You need to have [laravel nova](https://nova.laravel.com/) installed in order for the resource generation to take place!
 
 ## Usage
