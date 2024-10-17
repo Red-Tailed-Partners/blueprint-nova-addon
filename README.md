@@ -6,7 +6,7 @@
 
 Installing this addon will allow you to generate your Nova resources with the `php artisan blueprint:build` command.
 
-This fork bumps dependency requirements in order to support Laravel 11.
+This fork bumps dependency requirements in order to support Laravel 11 and appends 'Resource' to Nova Resource filenames, e.g., `ModelClass.php` is now written as `ModelClassResource.php`.
 
 ## Referencing this Fork in composer.json
 You will need to add this fork in your `composer.json` file before you attempt Installation:
