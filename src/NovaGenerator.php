@@ -113,7 +113,7 @@ class NovaGenerator implements Generator
     protected function getNovaResourceClassName(Model $model): string
     {
         $afterSelector = config('blueprint.models_namespace') ?: config('blueprint.namespace');
-        $modelBaseClass = Str::after($model->fullyQualifiedClassName(), $afterSelector);
+        $modelBaseClass = Str::after($model->fullyQualifiedClassName().'Resource', $afterSelector);
 
         return $this->getFullyQualifiedClassNameForComponent('resource', $modelBaseClass);
     }
